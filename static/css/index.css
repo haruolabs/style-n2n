@@ -155,3 +155,14 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.item-clip {
+  border-width: 0 !important;
+}
+
+.item-desc {
+  font-size: medium !important;
+  border-width: 0 !important;
+  padding-bottom: 1.5em !important;
+  text-align: center !important;
+}

@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="Style NeRF2NeRF is a simple yet effective text-driven NeRF stylization method">
+  <meta name="keywords" content="Style Transfer, NeRF, Sliced Wasserstein">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>Style-NeRF2NeRF: 3D Style Transfer from Style-Aligned Multi-View Images</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -32,16 +32,18 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/favicon.ico">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <!-- <sctipt defer src="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"></sctipt> -->
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
 <body>
 
+<!--
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -52,12 +54,12 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <a class="navbar-item" href="#">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
       </a>
-
+    
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
           More Research
@@ -81,6 +83,7 @@
 
   </div>
 </nav>
+-->
 
 
 <section class="hero">
@@ -88,39 +91,30 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">Style-NeRF2NeRF</h1>
+          <h2 class="title is-3">3D Style Transfer from Style-Aligned Multi-View Images</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              Haruo Fujiwara<sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              Yusuke Mukuta<sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://scholar.google.com/citations?user=k8rlJ8AAAAAJ&hl=ja">Tatsuya Harada</a><sup>1,2</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>The University of Tokyo,</span>
+            <span class="author-block"><sup>2</sup>RIKEN</span>
           </div>
 
           <div class="column has-text-centered">
+            Code coming soon.
             <div class="publication-links">
               <!-- PDF Link. -->
+              <!--
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -128,8 +122,9 @@
                   <span>Paper</span>
                 </a>
               </span>
+              -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -138,6 +133,7 @@
                 </a>
               </span>
               <!-- Video Link. -->
+              <!--
               <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
@@ -147,7 +143,9 @@
                   <span>Video</span>
                 </a>
               </span>
+              -->
               <!-- Code Link. -->
+              <!--
               <span class="link-block">
                 <a href="https://github.com/google/nerfies"
                    class="external-link button is-normal is-rounded is-dark">
@@ -157,7 +155,9 @@
                   <span>Code</span>
                   </a>
               </span>
+              -->
               <!-- Dataset Link. -->
+              <!--
               <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
@@ -166,6 +166,8 @@
                   </span>
                   <span>Data</span>
                   </a>
+              </span>
+                -->
             </div>
 
           </div>
@@ -175,80 +177,148 @@
   </div>
 </section>
 
+<!--
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
+      <img src="./static/images/pipeline-graphic.png" />
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
+        <source src="./static/videos/farm_base480p.mov"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        Style-NeRF2NeRF  3D style transfer on NeRF representations.
       </h2>
     </div>
   </div>
 </section>
+-->
 
-
+<!-- farm -->
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
+        <div class="item item-clip">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
+            <source src="./static/videos/farm/farm_base480p.mov"
                     type="video/mp4">
           </video>
+          <div class="item subtitle item-desc"><b>Original Campsite</b></div>
         </div>
-        <div class="item item-chair-tp">
+        <div class="item item-clip">
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
+            <source src="./static/videos/farm/farm-retro_s1g15_swd256_64.mp4"
                     type="video/mp4">
           </video>
+          <div class="item subtitle item-desc"><b><i>"A campfield with orange tents, Hokusai style"</b></i></div>
         </div>
-        <div class="item item-shiba">
+        
+        <div class="item item-clip">
           <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
+            <source src="./static/videos/farm/farm-horror_s1g15_swd256_64.mp4"
                     type="video/mp4">
           </video>
+          <div class="item subtitle item-desc"><b><i>"A campfield with yellow tents, Van Gogh painting style"</b></i></div>
         </div>
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
+            <source src="./static/videos/farm/farm-deepsea_s1g15_swd256_64.mp4"
                     type="video/mp4">
           </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
+        </div>  
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/farm/farm-vitagecomic_s1g15_swd256_64.mp4"
                     type="video/mp4">
           </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
+        </div>  
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/farm/farm-hudson_s1g15_swd256_64.mp4"
                     type="video/mp4">
           </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
+        </div> 
       </div>
     </div>
   </div>
 </section>
 
+<!-- campsite -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-clip">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/campsite/campsite-original.mp4"
+                    type="video/mp4">
+          </video>
+          <div class="item subtitle item-desc"><b>Original Campsite</b></div>
+        </div>
+        <div class="item item-clip">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/campsite/campsite-hokusai_s1g15_swd256_64.mp4"
+                    type="video/mp4">
+          </video>
+          <div class="item subtitle item-desc"><b><i>"A campfield with orange tents, Hokusai style"</b></i></div>
+        </div>
+        
+        <div class="item item-clip">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/campsite/campsite-vangogh-yellowtents_s1g7.5_swd256_64.mp4"
+                    type="video/mp4">
+          </video>
+          <div class="item subtitle item-desc"><b><i>"A campfield with yellow tents, Van Gogh painting style"</b></i></div>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/campsite/camspite-snowynight_s1g18_swd256_64.mp4"
+                    type="video/mp4">
+          </video>
+        </div>   
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- bear-->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-clip">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/campsite/campsite-original.mp4"
+                    type="video/mp4">
+          </video>
+          <div class="item subtitle item-desc"><b>Original Campsite</b></div>
+        </div>
+        <div class="item item-clip">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/campsite/campsite-hokusai_s1g15_swd256_64.mp4"
+                    type="video/mp4">
+          </video>
+          <div class="item subtitle item-desc"><b><i>"A campfield with orange tents, Hokusai style"</b></i></div>
+        </div>
+        
+        <div class="item item-clip">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/campsite/campsite-vangogh-yellowtents_s1g7.5_swd256_64.mp4"
+                    type="video/mp4">
+          </video>
+          <div class="item subtitle item-desc"><b><i>"A campfield with yellow tents, Van Gogh painting style"</b></i></div>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/campsite/camspite-snowynight_s1g18_swd256_64.mp4"
+                    type="video/mp4">
+          </video>
+        </div>   
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -258,31 +328,11 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            We propose a simple yet effective pipeline for stylizing a 3D scene, harnessing the power of 2D image diffusion models.
+            Given a NeRF model reconstructed from a set of multi-view images, we perform 3D style transfer by refining the source NeRF model using stylized images generated by a style-aligned image-to-image diffusion model.
+            Given a target style prompt, we first generate perceptually similar multi-view images by leveraging a depth-conditioned diffusion model with an attention-sharing mechanism. Next, based on the stylized multi-view images, we propose to guide the style transfer process with the sliced Wasserstein loss based on the feature maps extracted from a pre-trained CNN model.
+            Our pipeline consists of decoupled steps, allowing users to test various prompt ideas and preview the stylized 3D result before proceeding to the NeRF fine-tuning stage.
+            We demonstrate that our method can transfer diverse artistic styles to real-world 3D scenes with competitive quality.
           </p>
         </div>
       </div>
@@ -290,26 +340,31 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
+    
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
+          Coming soon...
+          <!--
           <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          -->
         </div>
       </div>
     </div>
+    
     <!--/ Paper video. -->
   </div>
+
 </section>
 
 
 <section class="section">
   <div class="container is-max-desktop">
 
+    <!--
     <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Visual Effects</h2>
@@ -318,14 +373,12 @@
             would be impossible without nerfies since it would require going through a wall.
           </p>
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
+            <source src="./static/videos/campsite/campsite-original.mp4"
                     type="video/mp4">
           </video>
         </div>
       </div>
-      <!--/ Visual Effects. -->
 
-      <!-- Matting. -->
       <div class="column">
         <h2 class="title is-3">Matting</h2>
         <div class="columns is-centered">
@@ -343,14 +396,10 @@
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+  -->
 
         <!-- Interpolating. -->
+        <!--
         <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
@@ -382,15 +431,23 @@
           </div>
         </div>
         <br/>
+        -->
         <!--/ Interpolating. -->
 
+        <h3 class="title is-3">Overall Pipeline</h3>
+        <div class="content">
+          <img src="./static/images/pipeline-graphic.png"/>
+        </div>
+
         <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <h3 class="title is-3">Style Blending</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            Given two different sets of stylized views, one may obtain a style-blended scene by refining the source NeRF model towards the Wasserstein barycenter where <i>t</i> is the blending weight between the two styles.
           </p>
+        </div>
+        <div class="content">
+          <img src="./static/images/blend-face.png"/>
         </div>
         <div class="content has-text-centered">
           <video id="replay-video"
@@ -399,7 +456,7 @@
                  preload
                  playsinline
                  width="75%">
-            <source src="./static/videos/replay.mp4"
+            <source src="./static/videos/style-blending.mov"
                     type="video/mp4">
           </video>
         </div>
@@ -411,7 +468,7 @@
 
 
     <!-- Concurrent Work. -->
-    <div class="columns is-centered">
+    <!--
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
 
@@ -435,23 +492,25 @@
         </div>
       </div>
     </div>
+    -->
     <!--/ Concurrent Work. -->
 
   </div>
 </section>
 
-
+<!--
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@article{xxx,
+  author    = {Haruo Fujiwara, Yusuke Mukuta and Tatsuya Harada},
+  title     = {Style-NeRF2NeRF: 3D Style Transfer from Style-Aligned Multi-View Images},
+  journal   = {arXiv preprint arXiv:xxxx.00xxx},
+  year      = {2024},
 }</code></pre>
   </div>
 </section>
+-->
 
 
 <footer class="footer">
@@ -461,7 +520,7 @@
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="#" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -472,13 +531,7 @@
             This website is licensed under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            The page is based on the <a href="https://github.com/nerfies/nerfies.github.io">source code</a> provided by Nerfies. We thank the authors for sharing their page template.
           </p>
         </div>
       </div>
