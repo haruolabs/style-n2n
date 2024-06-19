@@ -1,8 +1,9 @@
 # Nerfies
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the Style-NeRF2NeRF.
+The webpage is based on [Nerfies](https://nerfies.github.io)
 
-If you find Nerfies useful for your work please cite:
+Nerfies paper:
 ```
 @article{park2021nerfies
   author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
