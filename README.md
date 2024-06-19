@@ -1,6 +1,6 @@
 # Style-NeRF2NeRF
 
-Repository for project page of Style-NeRF2NeRF.
+Repository for project page of [Style-NeRF2NeRF](https://haruolabs.github.io/style-n2n/).
 The source code is based on [Nerfies](https://nerfies.github.io). We thank the authors for sharing their awesome template.
 
 Nerfies paper:
