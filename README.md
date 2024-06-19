@@ -1,7 +1,7 @@
-# Nerfies
+# Style-NeRF2NeRF
 
-This is the repository that contains source code for the Style-NeRF2NeRF.
-The webpage is based on [Nerfies](https://nerfies.github.io)
+Repository for project page of Style-NeRF2NeRF.
+The source code is based on [Nerfies](https://nerfies.github.io). We thank the authors for sharing their awesome template.
 
 Nerfies paper:
 ```
